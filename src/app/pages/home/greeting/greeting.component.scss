@@ -1,4 +1,5 @@
 @import "images";
+@import "slide-animations";
 
 :host {
     #greeting-container {
@@ -8,5 +9,10 @@
 
     #greeting-text {
         color: red;
+    }
+
+    .profile-img {
+        @extend .slide-in-left;
+        width: 50%;
     }
 }
