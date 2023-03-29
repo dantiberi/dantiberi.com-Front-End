@@ -16,6 +16,5 @@ export class DarkModeToggleComponent {
 
   onToggle(): void {
     this.darkModeService.toggle();
-    console.log("WOW");
   }
 }
