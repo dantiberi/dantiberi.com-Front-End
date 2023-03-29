@@ -4,15 +4,19 @@
 :host {
     #greeting-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
     }
 
     #greeting-text {
-        color: red;
+        margin: auto 1em;
     }
 
     .profile-img {
         @extend .slide-in-left;
-        width: 50%;
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
     }
 }
