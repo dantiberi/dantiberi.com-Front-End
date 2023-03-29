@@ -10,14 +10,17 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #2a3439;
+
+  transition: background-color 1s linear;
 }
 
 body.dark-mode {
   color: #F1F2F8;
-  background: rgb(21, 23, 52);
-  background: linear-gradient(68deg, rgba(21, 23, 52, 1) 0%, rgba(21, 41, 52, 1) 55%, rgba(42, 55, 62, 1) 100%);
+  background-color: #334047;
+  //background: rgb(21, 23, 52);
+  //background: linear-gradient(68deg, rgba(21, 23, 52, 1) 0%, rgba(21, 41, 52, 1) 55%, rgba(42, 55, 62, 1) 100%);
 }
 
 body:not(.dark-mode-preloading) {
-  transition: all 0.3s linear;
+  transition: all 1s linear;
 }
