@@ -17,11 +17,25 @@
   }
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(+150vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .slide-in-left {
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .slide-in-right {
   animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.slide-in-bottom {
+  animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
