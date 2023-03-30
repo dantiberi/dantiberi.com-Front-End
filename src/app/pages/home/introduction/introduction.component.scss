@@ -9,9 +9,14 @@
         align-items: center;
         @extend .dark-gray-alpha-background;
         @extend .slide-in-right;
+
         mat-icon {
             transform: scale(2);
             padding: 1em;
+        }
+        
+        p {
+            text-indent: 1em;
         }
     }
 
