@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "backgrounds";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: #2a3439;
+
+  @extend .gradient-background-1;
+}
+
+body.dark-mode {
+  color: #F1F2F8;
+  @extend .gradient-background-2;
+}
+
+body:not(.dark-mode-preloading) {
+  transition: all 1s linear;
+}

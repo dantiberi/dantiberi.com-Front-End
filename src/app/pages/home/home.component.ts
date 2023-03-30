@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  showEmail = false;
+
+  emailMe(){
+    location.href = "mailto:dan.tiberi@protonmail.com";
+
+    //this.showEmail = !this.showEmail; //Toggles displaying email on each click.
+    this.showEmail = true;
+  }
 }

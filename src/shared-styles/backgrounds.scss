@@ -1,0 +1,57 @@
+@import "shadows";
+
+.light-gray-alpha-background {
+  background-color: rgba(241, 242, 248, 0.2); //#f1f2f8
+  border-radius: 5px;
+  padding: 0.5em;
+  @extend .shadow-23;
+}
+
+.dark-gray-alpha-background {
+  background-color: rgba(51, 64, 71, 0.2); //#334047
+  border-radius: 5px;
+  padding: 0.5em;
+  @extend .shadow-23;
+}
+
+.light-blue-alpha-background {
+  background-color: rgba(98, 141, 209, 0.2);
+  border-radius: 5px;
+  padding: 0.5em;
+  @extend .shadow-23;
+}
+
+.dark-blue-alpha-background {
+  background-color: rgba(98, 141, 209, 0.5);
+  border-radius: 5px;
+  padding: 0.5em;
+  @extend .shadow-23;
+}
+
+.gradient-background-1 {
+  background: linear-gradient(45deg, rgba(144, 148, 245, 1) 15%, rgba(255, 255, 255, 1) 53%, rgba(106, 159, 231, 1) 88%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+.gradient-background-2 {
+  background: linear-gradient(45deg, rgba(76, 79, 139, 1) 25%, rgba(51, 64, 71, 1) 51%, rgba(38, 56, 79, 1) 71%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

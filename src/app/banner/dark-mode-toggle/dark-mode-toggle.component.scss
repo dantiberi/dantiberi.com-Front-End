@@ -1,0 +1,9 @@
+:host {
+    mat-icon {
+        margin: 0;
+    }
+
+    body.dark-mode & mat-icon {
+        color: #F1F2F8;
+    }
+}

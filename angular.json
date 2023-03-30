@@ -30,9 +30,15 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/shared-styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -93,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
