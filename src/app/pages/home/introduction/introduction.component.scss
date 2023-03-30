@@ -23,4 +23,17 @@
     body.dark-mode & #intro-container {
         @extend .light-gray-alpha-background;
     }
+
+    @media screen and (min-width: 600px) {
+      #intro-container {
+        max-width: 60vw;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      #intro-container {
+        max-width: 40vw;
+      }
+    }
 }
