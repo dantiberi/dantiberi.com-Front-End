@@ -1,25 +1,31 @@
+@import "shadows";
+
 .light-gray-alpha-background {
   background-color: rgba(241, 242, 248, 0.2); //#f1f2f8
   border-radius: 5px;
   padding: 0.5em;
+  @extend .shadow-23;
 }
 
 .dark-gray-alpha-background {
   background-color: rgba(51, 64, 71, 0.2); //#334047
   border-radius: 5px;
   padding: 0.5em;
+  @extend .shadow-23;
 }
 
 .light-blue-alpha-background {
   background-color: rgba(98, 141, 209, 0.2);
   border-radius: 5px;
   padding: 0.5em;
+  @extend .shadow-23;
 }
 
 .dark-blue-alpha-background {
   background-color: rgba(98, 141, 209, 0.5);
   border-radius: 5px;
   padding: 0.5em;
+  @extend .shadow-23;
 }
 
 .gradient-background-1 {
