@@ -9,9 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class DarkModeToggleComponent {
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
-  
+  isDarkMode = false;
+
+  systemDarkModeAlreadyOn = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   constructor (private darkModeService: DarkModeService) {
-    this.darkModeService.disable;
+    this.darkMode$.subscribe(event => this.isDarkMode = event);
+
+    this.systemDarkModeAlreadyOn ? this.darkModeService.enable() : this.darkModeService.disable(); //Auto-detect system dark mode setting.
   }
 
   onToggle(): void {

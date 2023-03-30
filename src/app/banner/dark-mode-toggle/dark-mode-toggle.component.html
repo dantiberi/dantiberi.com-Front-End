@@ -1,3 +1,4 @@
 <button mat-button (click)="onToggle()">
-    <mat-icon aria-hidden="false" aria-label="Enable dark mode" fontIcon="dark_mode"></mat-icon>
+    <mat-icon *ngIf="isDarkMode" aria-hidden="false" aria-label="Enable dark mode" fontIcon="dark_mode"></mat-icon>
+    <mat-icon *ngIf="!isDarkMode" aria-hidden="false" aria-label="Enable dark mode" fontIcon="light_mode"></mat-icon>
 </button>
