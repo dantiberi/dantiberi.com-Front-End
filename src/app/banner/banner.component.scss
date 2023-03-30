@@ -8,11 +8,11 @@
         align-items: baseline;
         padding: 0.25em 0.25em;
         margin: 0.2em 0.2em;
-        @extend .dark-gray-alpha-background;
+        @extend .dark-blue-alpha-background;
     }
 
     body.dark-mode & #banner-container {
-        @extend .light-gray-alpha-background;
+        @extend .light-blue-alpha-background;
     }
 
     h1 {
