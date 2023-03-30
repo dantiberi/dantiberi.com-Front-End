@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "backgrounds";
 
 html,
 body {
@@ -11,14 +12,12 @@ body {
   font-size: 16px;
   color: #2a3439;
 
-  transition: background-color 1s linear;
+  @extend .gradient-background-1;
 }
 
 body.dark-mode {
   color: #F1F2F8;
-  background-color: #334047;
-  //background: rgb(21, 23, 52);
-  //background: linear-gradient(68deg, rgba(21, 23, 52, 1) 0%, rgba(21, 41, 52, 1) 55%, rgba(42, 55, 62, 1) 100%);
+  @extend .gradient-background-2;
 }
 
 body:not(.dark-mode-preloading) {
