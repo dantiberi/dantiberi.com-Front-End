@@ -1,5 +1,32 @@
+@import "backgrounds";
+@import "slide-animations";
+
 :host {
     #home-container {
         margin: 1em;
+    }
+
+    #button-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 1em;
+
+        button {
+            height: fit-content;
+            margin-bottom: 1em;
+            color: inherit;
+            @extend .dark-gray-alpha-background;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    body.dark-mode & #button-container {
+        button {
+            color: inherit;
+            @extend .light-gray-alpha-background;
+        }
     }
 }
