@@ -1,4 +1,10 @@
 <div id="home-container">
     <app-greeting></app-greeting>
     <app-introduction></app-introduction>
+    <div id="button-container">
+        <button onclick="window.open('https://dantiberiazstorage.blob.core.windows.net/mywebsiteres/Dan Tiberi - Resume 3-30-23 WS.pdf','_blank')" mat-button>View My Resume</button>
+        <button (click)="emailMe()" mat-button>Contact Me <p *ngIf="showEmail">dan.tiberi@protonmail.com</p></button>
+        <button onclick="window.open('https://www.linkedin.com/in/dan-tiberi-979a32208','_blank')" mat-button>LinkedIn Profile</button>
+        <button onclick="window.open('https://github.com/dantiberi','_blank')" mat-button>GitHub Profile</button>
+    </div>
 </div>

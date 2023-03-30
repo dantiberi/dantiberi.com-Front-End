@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { GreetingComponent } from './greeting/greeting.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 const exportList = [HomeComponent, GreetingComponent, IntroductionComponent];
 
@@ -11,7 +12,8 @@ const exportList = [HomeComponent, GreetingComponent, IntroductionComponent];
   declarations:  exportList,
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
   ],
   exports: exportList
 })

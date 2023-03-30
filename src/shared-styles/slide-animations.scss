@@ -1,6 +1,6 @@
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(-150vw);
   }
   100% {
     transform: translateX(0);
@@ -9,7 +9,7 @@
 
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(+150%);
+    transform: translateX(+150vw);
   }
 
   100% {
