@@ -11,6 +11,8 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #2a3439;
+  width: 100vw;
+  height: 100vh;
 
   @extend .gradient-background-1;
 }
