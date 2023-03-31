@@ -5,6 +5,7 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 const exportList = [HomeComponent, GreetingComponent, IntroductionComponent];
 
@@ -14,6 +15,10 @@ const exportList = [HomeComponent, GreetingComponent, IntroductionComponent];
     CommonModule,
     MatIconModule,
     MatButtonModule,
+    BrowserModule,
+  ],
+  providers: [
+    Title                   //Register the Service
   ],
   exports: exportList
 })
