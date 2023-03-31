@@ -34,6 +34,10 @@
     @media screen and (min-width: 1000px) {
       #intro-container {
         max-width: 40vw;
+        
+        p {
+            padding: 2em;
+        }
       }
     }
 }
