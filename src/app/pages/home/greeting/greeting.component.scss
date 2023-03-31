@@ -14,7 +14,7 @@
 
   #greeting-text {
     margin: auto 1em;
-    max-width: 33vw;
+    width: 70vw;
   }
 
   #img-wrapper {
@@ -34,7 +34,7 @@
 
   @media screen and (min-width: 1030px) {
     #greeting-text {
-      max-width: 25vw;
+      width: 25vw;
     }
   }
 }
