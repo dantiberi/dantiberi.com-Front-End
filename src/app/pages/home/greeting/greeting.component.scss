@@ -2,45 +2,39 @@
 @import "slide-animations";
 
 :host {
-    #greeting-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        max-height: 33vh;
-        margin-bottom: 1em;
-        place-content: center;
-    }
+  #greeting-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 33vh;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #greeting-text {
+    margin: auto 1em;
+    max-width: 33vw;
+  }
+
+  #img-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .profile-img {
+    @extend .slide-in-left;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 1030px) {
     #greeting-text {
-        margin: auto 1em;
+      max-width: 25vw;
     }
-
-    .profile-img {
-        @extend .slide-in-left;
-        width: 100%;
-        height: auto;
-        flex-shrink: 0;
-        max-height: unset;
-    }
-
-    @media screen and (min-width: 530px) {
-      .profile-img {
-        max-height: 33vh;
-      }
-
-      #greeting-text {
-        max-width: 33vw;
-      }
-    }
-
-    @media screen and (min-width: 1030px) {
-      .profile-img {
-        max-height: 33vh;
-      }
-
-      #greeting-text {
-        max-width: 25vw;
-      }
-    }
+  }
 }
