@@ -23,7 +23,3 @@ body.dark-mode {
 body:not(.dark-mode-preloading) {
   transition: all 1s linear;
 }
-
-@viewport {
-  orientation: portrait;
-}
