@@ -26,10 +26,17 @@
   .profile-img {
     @extend .slide-in-left;
     flex-shrink: 0;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     max-height: 100%;
     object-fit: cover;
+  }
+
+  @media screen and (min-width: 530px) {
+    #greeting-text {
+      width: 40vw;
+    }
   }
 
   @media screen and (min-width: 1030px) {
