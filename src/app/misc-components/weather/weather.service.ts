@@ -19,7 +19,7 @@ export class WeatherService {
     return new Promise<WeatherData>((resolve, reject) => {
       const apiCallOptions = {
         method: 'GET',
-        url: 'https://api.open-meteo.com/v1/forecast?latitude=41.84&longitude=-87.61&models=best_match&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=America%2FChicago',
+        url: 'https://api.open-meteo.com/v1/forecast?latitude=41.85&longitude=-87.65&models=best_match&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=America%2FChicago',
       };
       axios
         .request(apiCallOptions)
