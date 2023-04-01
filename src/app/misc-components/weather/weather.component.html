@@ -1,0 +1,11 @@
+<div class="weather-container">
+    <h3>Weather - Chicago, IL</h3>
+    <div class="weather-cards">
+        <div class="weather-card" *ngFor="let day of relativeDaysOfWeek; let i = index">
+            <p class="day-names">{{day}}</p>
+            <p class="temp">{{getMinMaxTemps(i)[0]}} °F</p>
+            <mat-icon class="weather-icon" fontIcon="{{getWeatherIcon(i)}}"></mat-icon>
+            <p class="temp">{{getMinMaxTemps(i)[1]}} °F</p>
+        </div>
+    </div>
+</div>

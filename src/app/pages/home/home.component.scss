@@ -6,6 +6,10 @@
         margin: 1em;
     }
 
+    #home-weather-container {
+      padding-bottom: 4em;
+    }
+
     #button-container {
         display: flex;
         flex-direction: column;
@@ -16,6 +20,8 @@
             height: fit-content;
             margin-bottom: 1em;
             color: inherit;
+            padding: 0.5em;
+            
             @extend .dark-gray-alpha-background;
 
             p {
