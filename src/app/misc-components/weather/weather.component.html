@@ -1,1 +1,7 @@
-<p>weather works!</p>
+<div class="weather-container">
+    <div class="weather-cards">
+        <div class="weather-card" *ngFor="let day of relativeDaysOfWeek; let i = index">
+            <p class="day-names">{{day}}</p>
+        </div>
+    </div>
+</div>
