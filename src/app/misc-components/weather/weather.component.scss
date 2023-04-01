@@ -1,4 +1,10 @@
-.weather-cards {
-    display: flex;
-    justify-content: space-around;
+:host {
+    .weather-cards {
+      display: flex;
+      justify-content: space-around;
+
+      .day-names {
+        text-transform: capitalize;
+      }
+    }
 }
