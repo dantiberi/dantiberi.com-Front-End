@@ -48,5 +48,33 @@ export class WeatherComponent implements OnInit{
   getMinMaxTemps(day: number): [number | undefined, number | undefined] {
     return [this.currentWeather?.daily.temperature_2m_min[day], this.currentWeather?.daily.temperature_2m_max[day]];
   }
+
+  //https://open-meteo.com/
+  getWeatherIcon(day: number): string {
+    const weatherCode = this.currentWeather?.daily.weathercode[day] ?? 0;
+
+    switch (true) {
+      case (weatherCode == 0): 
+        return "sunny";
+      case (weatherCode == 1): 
+        return "sunny";
+      case (weatherCode == 1): 
+        return "partly_cloudy_day";
+      case (weatherCode == 1): 
+        return "cloudy";
+      case (weatherCode == 45 || weatherCode == 48): 
+        return "foggy";
+      case (weatherCode >= 51 && weatherCode <= 55): 
+        return "water_drop";
+      case ((weatherCode >= 61 && weatherCode <= 67) || (weatherCode >= 80 && weatherCode <= 82)): 
+        return "cloudy_snowing";
+      case ((weatherCode >= 71 && weatherCode <= 77) || weatherCode == 85 || weatherCode == 86): 
+        return "ac_unit";
+      case (weatherCode >= 95 || weatherCode <= 99):
+        return "thunderstorm";
+      default:
+        return "nest_farsight_weather";
+    }
+  }
 }
 
