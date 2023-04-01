@@ -11,6 +11,8 @@ export class WeatherComponent implements OnInit{
 
   currentWeather: WeatherData | undefined;
 
+  daysOfWeek: string[] = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
