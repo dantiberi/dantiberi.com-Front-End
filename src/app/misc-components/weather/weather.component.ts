@@ -40,5 +40,13 @@ export class WeatherComponent implements OnInit{
     });
   }
 
+  /**
+   * Returns the min-max temp in F for given day.
+   * @param day Index of day. 0-6, with 0 being today.
+   * @returns Min temperature, Max temperature
+   */
+  getMinMaxTemps(day: number): [number | undefined, number | undefined] {
+    return [this.currentWeather?.daily.temperature_2m_min[day], this.currentWeather?.daily.temperature_2m_max[day]];
+  }
 }
 

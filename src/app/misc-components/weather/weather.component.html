@@ -2,6 +2,8 @@
     <div class="weather-cards">
         <div class="weather-card" *ngFor="let day of relativeDaysOfWeek; let i = index">
             <p class="day-names">{{day}}</p>
+            <p>{{getMinMaxTemps(i)[0]}}</p>
+            <p>{{getMinMaxTemps(i)[1]}}</p>
         </div>
     </div>
 </div>
