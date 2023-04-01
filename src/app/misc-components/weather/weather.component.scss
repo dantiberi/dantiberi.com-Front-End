@@ -4,6 +4,7 @@
 :host {
     .weather-container {
         @extend .light-gray-alpha-background;
+        @extend .slide-in-right;
 
         h3 {
             font-size: 125%;
@@ -29,7 +30,6 @@
       font-size: 150%;
 
       @extend .dark-gray-alpha-background;
-      @extend .slide-in-right;
 
       p {
         margin: unset;
