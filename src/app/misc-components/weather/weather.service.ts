@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { WeatherData } from './weather-interfaces';
 
+//https://open-meteo.com/en/docs#api_form
+
 @Injectable({
   providedIn: 'root'
 })
