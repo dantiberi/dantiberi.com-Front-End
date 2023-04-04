@@ -1,10 +1,13 @@
 <div class="weather-container">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <h3>Weather - Chicago, IL</h3>
     <div class="weather-cards">
         <div class="weather-card" *ngFor="let day of relativeDaysOfWeek; let i = index">
             <p class="day-names">{{day}}</p>
             <p class="temp">{{getMinMaxTemps(i)[0]}} °F</p>
-            <mat-icon class="weather-icon" fontIcon="{{getWeatherIcon(i)}}"></mat-icon>
+            <span class="material-symbols-outlined weather-icon">
+                {{ getWeatherIcon(i) }}
+            </span>
             <p class="temp">{{getMinMaxTemps(i)[1]}} °F</p>
         </div>
     </div>
