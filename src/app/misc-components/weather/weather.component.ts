@@ -50,8 +50,10 @@ export class WeatherComponent implements OnInit{
   }
 
   /**
-   * API provides a weather code that generally describes the weather overall for that day. Here we interpret that code into an appropriate Angular material icon. 
-   * See API docs: https://open-meteo.com/
+   * API provides a weather code that generally describes the weather overall for that day. Here we interpret that code into an appropriate Angular icon. 
+   * See API docs: 
+   * https://open-meteo.com/
+   * https://fonts.google.com/icons
    * @param day Day index
    * @returns Angular material icon name. 
    */
@@ -59,23 +61,23 @@ export class WeatherComponent implements OnInit{
     const weatherCode = this.currentWeather?.daily.weathercode[day] ?? 0;
 
     switch (true) {
-      case (weatherCode == 0): 
+      case (weatherCode == 0):// Clear
         return "sunny";
-      case (weatherCode == 1): 
+      case (weatherCode == 1): // Mainly Clear
         return "sunny";
-      case (weatherCode == 2): 
+      case (weatherCode == 2): // Partly cloudy
+        return "partly_cloudy_day";
+      case (weatherCode == 3): // Overcast
         return "cloudy";
-      case (weatherCode == 3): 
-        return "cloudy";
-      case (weatherCode == 45 || weatherCode == 48): 
+      case (weatherCode == 45 || weatherCode == 48): //Foggy
         return "foggy";
-      case (weatherCode >= 51 && weatherCode <= 55): 
+      case (weatherCode >= 51 && weatherCode <= 55): //Drizzle
         return "water_drop";
-      case ((weatherCode >= 61 && weatherCode <= 63) || (weatherCode >= 80 && weatherCode <= 81)): 
+      case ((weatherCode >= 61 && weatherCode <= 63) || (weatherCode >= 80 && weatherCode <= 81)): // Rain
+        return "rainy";
+      case ((weatherCode >= 71 && weatherCode <= 77) || weatherCode == 85 || weatherCode == 86): // Snow
         return "cloudy_snowing";
-      case ((weatherCode >= 71 && weatherCode <= 77) || weatherCode == 85 || weatherCode == 86): 
-        return "ac_unit";
-      case ((weatherCode >= 95 && weatherCode <= 99) || (weatherCode == 65) || (weatherCode == 82)):
+      case ((weatherCode >= 95 && weatherCode <= 99) || (weatherCode == 65) || (weatherCode == 82)): // Storm / Heavy Rain
         return "thunderstorm";
       default:
         return "nest_farsight_weather";
