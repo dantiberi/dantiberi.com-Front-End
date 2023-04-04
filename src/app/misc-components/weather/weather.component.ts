@@ -49,7 +49,12 @@ export class WeatherComponent implements OnInit{
     return [this.currentWeather?.daily.temperature_2m_min[day], this.currentWeather?.daily.temperature_2m_max[day]];
   }
 
-  //https://open-meteo.com/
+  /**
+   * API provides a weather code that generally describes the weather overall for that day. Here we interpret that code into an appropriate Angular material icon. 
+   * See API docs: https://open-meteo.com/
+   * @param day Day index
+   * @returns Angular material icon name. 
+   */
   getWeatherIcon(day: number): string {
     const weatherCode = this.currentWeather?.daily.weathercode[day] ?? 0;
 
@@ -58,19 +63,19 @@ export class WeatherComponent implements OnInit{
         return "sunny";
       case (weatherCode == 1): 
         return "sunny";
-      case (weatherCode == 1): 
-        return "partly_cloudy_day";
-      case (weatherCode == 1): 
+      case (weatherCode == 2): 
+        return "cloudy";
+      case (weatherCode == 3): 
         return "cloudy";
       case (weatherCode == 45 || weatherCode == 48): 
         return "foggy";
       case (weatherCode >= 51 && weatherCode <= 55): 
         return "water_drop";
-      case ((weatherCode >= 61 && weatherCode <= 67) || (weatherCode >= 80 && weatherCode <= 82)): 
+      case ((weatherCode >= 61 && weatherCode <= 63) || (weatherCode >= 80 && weatherCode <= 81)): 
         return "cloudy_snowing";
       case ((weatherCode >= 71 && weatherCode <= 77) || weatherCode == 85 || weatherCode == 86): 
         return "ac_unit";
-      case (weatherCode >= 95 || weatherCode <= 99):
+      case ((weatherCode >= 95 && weatherCode <= 99) || (weatherCode == 65) || (weatherCode == 82)):
         return "thunderstorm";
       default:
         return "nest_farsight_weather";
