@@ -13,6 +13,8 @@ body {
   color: #2a3439;
   width: 100vw;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   @extend .gradient-background-1;
 }
@@ -20,6 +22,8 @@ body {
 body.dark-mode {
   color: #F1F2F8;
   @extend .gradient-background-2;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body:not(.dark-mode-preloading) {
