@@ -28,28 +28,36 @@
       align-items: center;
       padding: 0 5%;
       font-size: 150%;
+      text-align: center;
 
       @extend .dark-gray-alpha-background;
 
       p {
         margin: unset;
+        flex-basis: 25%;
       }
 
       .day-names {
         text-transform: uppercase;
+        flex-basis: 25%;
       }
 
       .weather-icon {
-        padding: 0.25em;
+        flex-basis: 25%;
       }
 
       .temp {
         padding: 0.25em;
+        flex-basis: 25%;
       }
     }
 
-    body.dark-mode & .weather-card {
+    body.dark-mode & .weather-card:not(:first-child) {
       @extend .light-gray-alpha-background;
+    }
+    
+    .weather-card:first-child {
+      @extend .light-blue-alpha-background;
     }
   }
 

@@ -5,7 +5,7 @@
         <div class="weather-card" *ngFor="let day of relativeDaysOfWeek; let i = index">
             <p class="day-names">{{day}}</p>
             <p class="temp">{{getMinMaxTemps(i)[0]}} °F</p>
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined weather-icon">
                 {{ getWeatherIcon(i) }}
             </span>
             <p class="temp">{{getMinMaxTemps(i)[1]}} °F</p>
