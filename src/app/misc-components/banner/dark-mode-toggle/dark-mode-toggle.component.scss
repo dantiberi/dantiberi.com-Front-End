@@ -1,9 +1,20 @@
+@import "backgrounds";
+
 :host {
+    button {
+        @extend .dark-gray-alpha-background;
+    }
+
     mat-icon {
         margin: 0;
+        transform: scale(1.8);
     }
 
     body.dark-mode & mat-icon {
         color: #F1F2F8;
+    }
+
+    body.dark-mode & button {
+      @extend .light-gray-alpha-background;
     }
 }
