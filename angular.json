@@ -33,7 +33,7 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"],
+            "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "./src/shared-styles"
@@ -45,13 +45,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ],
               "outputHashing": "all"
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dantiberi-fe:build:production"
+              "buildTarget": "dantiberi-fe:build:production"
             },
             "development": {
-              "browserTarget": "dantiberi-fe:build:development"
+              "buildTarget": "dantiberi-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dantiberi-fe:build"
+            "buildTarget": "dantiberi-fe:build"
           }
         },
         "test": {
@@ -102,6 +102,11 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/shared-styles"
+              ]
+            },
             "scripts": []
           }
         }

@@ -9,8 +9,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Material Symbols for weather icons (used by app-weather) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body class="mat-typography">
+<body class="mat-typography dark-mode-preloading">
   <app-root></app-root>
+  <!-- Early dark mode init (replaces angular-dark-mode lib for better maintainability) -->
+  <script>
+  (function() {
+    try {
+      var KEY = 'darkMode';
+      var stored = localStorage.getItem(KEY);
+      var prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var enableDark = stored === 'true' || (stored === null && prefers);
+      var b = document.body;
+      if (enableDark) b.classList.add('dark-mode');
+      b.classList.remove('dark-mode-preloading');
+    } catch (e) {}
+  })();
+  </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeModule } from './pages/home/home.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { DarkModeToggleComponent } from './misc-components/banner/dark-mode-togg
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     HomeModule,
     BrowserAnimationsModule,

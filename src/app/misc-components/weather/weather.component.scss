@@ -14,6 +14,18 @@
         }
     }
 
+  .weather-loading,
+  .weather-error {
+    padding: 1em;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .weather-error button {
+    margin-top: 0.5em;
+  }
+
   .weather-cards {
     display: flex;
     flex-direction: column;

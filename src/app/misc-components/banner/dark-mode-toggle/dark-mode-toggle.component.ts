@@ -1,25 +1,36 @@
 import { Component } from '@angular/core';
-import { DarkModeService } from 'angular-dark-mode';
-import { Observable } from 'rxjs';
+
+const DARK_MODE_KEY = 'darkMode';
 
 @Component({
   selector: 'app-dark-mode-toggle',
   templateUrl: './dark-mode-toggle.component.html',
-  styleUrls: ['./dark-mode-toggle.component.scss']
+  styleUrls: ['./dark-mode-toggle.component.scss'],
+  standalone: false
 })
 export class DarkModeToggleComponent {
-  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   isDarkMode = false;
 
-  systemDarkModeAlreadyOn = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  constructor (private darkModeService: DarkModeService) {
-    this.darkMode$.subscribe(event => this.isDarkMode = event);
-
-    this.systemDarkModeAlreadyOn ? this.darkModeService.enable() : this.darkModeService.disable(); //Auto-detect system dark mode setting.
+  constructor() {
+    // Initial state is set by the inline script in index.html (body class).
+    // Sync our flag from current DOM class (or localStorage as fallback).
+    this.isDarkMode = document.body.classList.contains('dark-mode');
   }
 
   onToggle(): void {
-    this.darkModeService.toggle();
+    this.isDarkMode = !this.isDarkMode;
+
+    const body = document.body;
+    if (this.isDarkMode) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+
+    try {
+      localStorage.setItem(DARK_MODE_KEY, this.isDarkMode ? 'true' : 'false');
+    } catch (e) {
+      // localStorage may be unavailable (private mode etc.)
+    }
   }
 }
